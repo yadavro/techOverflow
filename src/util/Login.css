@@ -1,0 +1,77 @@
+
+  /* Container for the login form */
+.login {
+    margin-top: 50px; /* Space below the fixed header */
+ /* Space to the right of the side navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    background: linear-gradient(to right, #4b79a1, #283e51); /* Nice gradient background */
+  }
+  
+  /* Styling the form itself */
+  .LoginForm {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Ensures a nice size for the form */
+    text-align: center; /* Center the form content */
+  }
+  
+  /* Labels for form inputs */
+  .LoginForm label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #333;
+    text-align: left;
+  }
+  
+  /* Input fields */
+  .LoginForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  
+  /* Styling the submit button */
+  .LoginForm button {
+    width: 100%;
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+  }
+  
+  /* Button hover effect */
+  .LoginForm button:hover {
+    background-color: #45a049; /* Slightly darker green */
+  }
+  
+  /* The link to signup page */
+  .LoginForm p {
+    margin-top: 20px;
+    color: #333;
+    font-size: 14px;
+  }
+  
+  .LoginForm p a {
+    color: #007BFF; /* Blue for the link */
+    text-decoration: none;
+  }
+  
+  .LoginForm p a:hover {
+    text-decoration: underline;
+  }
+  

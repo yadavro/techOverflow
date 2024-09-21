@@ -1,0 +1,248 @@
+.home {
+    margin-top: 60px; /* Space below the fixed header */
+    margin-left: 10px; /* Space to the right of the side navbar */
+    margin-bottom:20px; /* Space above the fixed footer */
+    margin-right: 60px;
+  }
+  
+  .home-component {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5; /* Light grey background color */
+    padding: 20px; /* Add padding inside the component */
+    margin-bottom: 40px; /* Space below this component */
+    border-radius: 8px; /* Optional: Rounded corners for aesthetics */
+  }
+  
+  .highlight {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    color: black; /* Color of the text */
+  }
+  
+  .highlight::before {
+    content: '';
+    position: absolute;
+    left: 0; /* Align with the left of the text */
+    right: 0; /* Align with the right of the text */
+    top: 50%;
+    bottom: 0;
+    z-index: -1;
+    background: #FF9900; /* Stack Overflow orange color */
+    height: 0.5em; /* Controls the thickness of the stroke */
+    transform: skew(-10deg); /* Angle of the stroke */
+    width: 100%; /* Cover the full width of the text */
+    clip-path: inset(0 0% 0 5%); /* Create padding on left and right to avoid overlap */
+  }
+  
+  .signature {
+    flex: 1;
+    margin-right: 20px; /* Space between text and image */
+  }
+  
+  .developer {
+    max-width: 400px; /* Adjust width of the developer image */
+    height: auto;
+  }
+  
+  .auth-btn {
+    display: flex; /* Use flexbox to align items */
+    justify-content: flex-start; /* Align the button to the left */
+    padding: 10px; /* Add padding around the button */
+    margin-top: 20px; /* Space above the button */
+  }
+  
+  .auth-btn button {
+    background-color: #3399ff; /* Brighter blue background color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    color: white; /* White text color for contrast */
+    padding: 10px 20px; /* Padding for size */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1rem; /* Font size */
+    text-align: center; /* Center text inside the button */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    outline: none; /* Remove outline on focus */
+  }
+  
+  .auth-btn button:hover {
+    background-color: #007bff; /* Brighter blue on hover */
+  }
+  
+  .auth-btn button:focus {
+    box-shadow: 0 0 0 3px rgba(51, 153, 255, 0.6); /* Add a focus ring */
+  }
+  .centre-element{
+    margin-bottom: 200px;
+  }
+  .categories-icons {
+    display: grid;
+    grid-template-columns: repeat(4, 160px); /* Default: 4 columns with 160px width for larger cards */
+    column-gap: 70px; /* Space between cards on the same line */
+    row-gap: 20px; /* Space between lines of cards */
+    justify-content: center; /* Center the grid */
+    margin: 0 auto; /* Center the grid container */
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 1200px) {
+    .categories-icons {
+      grid-template-columns: repeat(3, 160px); /* 3 columns for medium screens */
+      column-gap: 25px; /* Adjusted space between cards on the same line */
+      row-gap: 20px; /* Adjusted space between lines of cards */
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .categories-icons {
+      grid-template-columns: repeat(2, 160px); /* 2 columns for smaller screens */
+      column-gap: 20px; /* Adjusted space between cards on the same line */
+      row-gap: 15px; /* Adjusted space between lines of cards */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .categories-icons {
+      grid-template-columns: repeat(1, 160px); /* 1 column for very small screens */
+      column-gap: 15px; /* Adjusted space between cards on the same line */
+      row-gap: 10px; /* Adjusted space between lines of cards */
+    }
+  }
+  
+  .icon-card {
+    background-color: white;
+    border: 2px solid lightgrey; /* Make border a bit bolder */
+    border-radius: 5px; /* Rounded corners */
+    padding: 20px; /* Increased padding for larger cards */
+    width: 160px; /* Size of the card */
+    height: 160px; /* Size of the card */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .icon-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect on hover */
+    border-color: grey /* Change border color on hover */
+  }
+  
+  .icon-card svg {
+    width: 60px; /* Adjust the size of the icons */
+    height: 60px; /* Adjust the size of the icons */
+    color: #333; /* Icon color */
+  }
+  
+  /* Tooltip styles */
+.icon-card .tooltip {
+    visibility: hidden; /* Hidden by default */
+    opacity: 0;
+    position: absolute;
+    bottom: 110%; /* Position above the card */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333; /* Background color for tooltip */
+    color: #fff; /* Text color */
+    padding: 5px;
+    border-radius: 4px; /* Rounded corners for tooltip */
+    text-align: center;
+    white-space: nowrap; /* Prevent text from wrapping */
+    transition: opacity 0.3s ease; /* Smooth transition */
+    z-index: 10; /* Ensure tooltip is on top */
+  }
+  
+  .icon-card:hover .tooltip {
+    visibility: visible; /* Show tooltip on hover */
+    opacity: 1;
+  }
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .home-component {
+      flex-direction: column; /* Stack elements vertically */
+      margin-left: 20px; /* Decrease margin on smaller screens */
+      margin-right: 20px;
+    }
+  
+    .developer {
+      max-width: 100%; /* Ensure the image adjusts to the screen width */
+    }
+  
+    .signature {
+      text-align: center; /* Center-align the text */
+      margin-bottom: 20px; /* Add space between text and image */
+    }
+  }
+  .advertisement {
+    display: flex; /* Arrange the cards side by side */
+    justify-content: space-around; /* Space around the cards */
+    gap: 40px; /* Space between the cards */
+    padding: 20px; /* Padding around the advertisement section */
+    margin: 0 auto; /* Center the advertisement section */
+    flex-wrap: wrap; /* Allow wrapping of cards when the screen is smaller */
+  }
+  
+  .card {
+    background-color: #2c2c2c; /* Dark grey background for a formal look */
+    color: white; /* White text for contrast on dark background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Light shadow for contrast */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    width: 450px; /* Fixed width for the card */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    position: relative; /* Use relative positioning */
+    text-align: left; /* Align text to the left */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+  }
+  
+  .tech-overflow {
+    width: 80px; /* Set size for the logo */
+  height: auto; /* Keep aspect ratio */
+  position: absolute; /* Position the logo absolutely */
+  top: 20px; /* Align it to the top */
+  left: 20px; /* Align it to the left */
+  }
+  
+  .card p {
+    font-size: 1rem; /* Font size for the paragraph */
+    color: white; /* Dark text color */
+    margin-bottom: 20px; /* Space below the text */
+  }
+  
+  .btn {
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove button border */
+    padding: 10px 20px; /* Padding for the button */
+    border-radius: 5px; /* Rounded button corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+    font-size: 1rem; /* Font size for the button */
+  }
+  
+  .btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  @media (max-width: 768px) {
+    .advertisement {
+      flex-direction: column; /* Stack cards vertically on smaller screens */
+      align-items: center; /* Center the cards on smaller screens */
+      gap: 20px; /* Reduce space between cards */
+    }
+  
+    .card {
+      width: 100%; /* Make card take full width on smaller screens */
+      max-width: 350px; /* Add a max width to prevent cards from being too wide */
+    }
+  }
+  
+  
