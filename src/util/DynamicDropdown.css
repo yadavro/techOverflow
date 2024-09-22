@@ -1,0 +1,65 @@
+
+.tag-input{
+    width: 85%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  .tag-input input:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none; /* Remove default outline */
+}
+  .dropdown {
+    position: absolute;
+    width: 85%;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0px 0;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+    transition: opacity 0.3s ease;
+  }
+  
+  .option {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .option:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .selected-options {
+    margin-top: 10px;
+  }
+  
+  .selected-options span {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .selected-options span button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #888;
+  }
+  
+  .selected-options span button:hover {
+    color: #d9534f;
+  }
+  
