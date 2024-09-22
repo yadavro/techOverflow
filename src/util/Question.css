@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .question {
     margin: 20px auto 70px auto; /* Add some margin for better layout */
     max-width: 800px; /* Limit width for responsiveness */
@@ -87,4 +88,95 @@
   .question-tag div:hover {
     background-color: #808080;/* Change hover color to a lighter shade */
     font-weight: bold;
+=======
+.question {
+    margin: 20px auto 70px auto; /* Add some margin for better layout */
+    max-width: 800px; /* Limit width for responsiveness */
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+    justify-content: space-between;
+  }
+  .question-header {
+    display: flex; /* Make elements display inline-block */
+    justify-content:space-evenly; /* Align items horizontally */
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .question-title {
+    font-weight: bold;
+    flex: 1; /* Allow text to take up available space */
+  }
+  
+  .ask-button {
+    margin-top: 18px;
+    background-color: #0d6efd;
+    color: #fff;
+    padding:10px 15px;
+    height: fit-content;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .ask-button:hover {
+    background-color: #0b5ed7;
+  }
+  
+  .question p {
+    text-align: center;
+    font-size:x-large;
+    margin-bottom: 1rem;
+  }
+  
+  .question-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .question-container:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .question-title {
+    font-size: 18px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .question-title:hover {
+    text-decoration: underline;
+  }
+  
+  .question-description {
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  .question-tag {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    
+  }
+  
+  .question-tag div {
+    margin-right: 1.5rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #eee;
+    font-size: 14px;
+    background-color: #e0e0e0;
+  }
+
+  .question-tag div:hover {
+    background-color: #808080;/* Change hover color to a lighter shade */
+    font-weight: bold;
+>>>>>>> b42d2e88d57ab86538b92622c922a7090e3d6727
   }

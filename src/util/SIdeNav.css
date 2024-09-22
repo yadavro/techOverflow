@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* SideNav.css */
 /* SideNav.css */
 .side-navbar {
@@ -62,3 +63,69 @@
 .side-navbar .nav-links svg {
     font-size: 1.2rem; /* Icon size */
 }
+=======
+/* SideNav.css */
+/* SideNav.css */
+.side-navbar {
+    width: 250px; /* Width of the side navbar */
+    background-color: white; /* Background color */
+    color: black; /* Text color */
+    position: fixed; /* Fixed position */
+    top: 70px; /* Align below the header */
+    bottom: 70px;
+    left: 0; 
+    height: calc(100vh - 70px - 180px); /* Full height minus header and footer */
+    padding: 20px;
+    box-sizing: border-box;
+    border-right: 1px solid #ddd; /* Optional: Add a border for better alignment */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+.side-navbar.collapsed {
+    width: 60px; /* Collapsed width */
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 1.5rem; /* Adjust size for better visibility */
+    position: absolute;
+    top: 2px; /* Adjust position */
+    left: 10px; /* Adjust position */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+
+.side-navbar .nav-links {
+    list-style: none; /* Remove bullets */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+}
+
+.side-navbar .nav-links li {
+    display: flex; /* Use flex to align items horizontally within the list item */
+    align-items: center; /* Vertically center the content */
+    margin: 12px 0; /* Adjust space between items */
+}
+
+.side-navbar .nav-links a {
+    color: black; /* Text color */
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center; /* Align items vertically within the link */
+    gap: 10px; /* Space between icon and text */
+    width: 100%; /* Ensure link takes full width of list item */
+}
+
+.side-navbar .nav-links a:hover {
+    text-decoration: underline;
+}
+
+.side-navbar .nav-links svg {
+    font-size: 1.2rem; /* Icon size */
+}
+>>>>>>> b42d2e88d57ab86538b92622c922a7090e3d6727

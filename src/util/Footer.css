@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .footer {
     background-color: black;
     color: white;
@@ -55,3 +56,62 @@
 .nav-links {
     cursor: pointer;
 }
+=======
+.footer {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height:auto;
+    z-index: 1000;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px; /* Minimum width */
+    padding: 0 10px; /* Reduced padding */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.footer-section img.logo {
+    cursor: pointer;
+    max-width: 150px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column; /* Align social links vertically */
+}
+
+.social-links a {
+    margin: 5px 0; /* Space between social links */
+    text-decoration: none;
+    color: white;
+}
+
+.footer h4 {
+    margin-top: 0;
+}
+
+.nav-links {
+    cursor: pointer;
+}
+>>>>>>> b42d2e88d57ab86538b92622c922a7090e3d6727
