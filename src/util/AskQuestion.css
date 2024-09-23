@@ -128,4 +128,16 @@
   .selected-options span button:hover {
     color: #d9534f;
   }
-  
+  .disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .firstnext{
+    margin-top:10px;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius:5px ;
+    cursor: pointer;
+  }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../util/DynamicDropdown.css";
-function DynamicDropdown() {
+function DynamicDropdown({onSelectedOptionsChange}) {
   const [inputValue, setInputValue] = useState("");
   const [dropdownOptions, setDropdownOptions] = useState([]);
   const [selectedOptions, setSelectedOptions] = useState([]);
@@ -29,22 +29,24 @@ function DynamicDropdown() {
     }
   };
   const handleSelectOption = (option) => {
-    setSelectedOptions((prevOptions) => [...prevOptions, option]);
+    const updatedOptions = [...selectedOptions, option];
+    setSelectedOptions(updatedOptions);
     setDropdownOptions([]);
     setInputValue(""); // Clear the text input after selection
+    onSelectedOptionsChange(updatedOptions); // Pass updated options to parent
   };
 
   // Remove selected option if needed
   const handleRemoveOption = (option) => {
-    setSelectedOptions((prevOptions) =>
-      prevOptions.filter((opt) => opt !== option)
-    );
+    const updatedOptions = selectedOptions.filter((opt) => opt !== option);
+    setSelectedOptions(updatedOptions);
+    onSelectedOptionsChange(updatedOptions); // Pass updated options to parent
   };
 
   return (
     <div className="textarea">
       <input
-      className="tag-input"
+        className="tag-input"
         rows="4"
         cols="50"
         value={inputValue}
@@ -54,7 +56,11 @@ function DynamicDropdown() {
       {dropdownOptions.length > 0 && (
         <ul className="dropdown">
           {dropdownOptions.map((option, index) => (
-            <li className="option" key={index} onClick={() => handleSelectOption(option)}>
+            <li
+              className="option"
+              key={index}
+              onClick={() => handleSelectOption(option)}
+            >
               {option}
             </li>
           ))}

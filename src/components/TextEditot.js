@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css'; // import styles
 
-const TextEditor = () => {
+const TextEditor = ({nextClick,onContentChange}) => {
   const [value, setValue] = useState('');
   const [error, setError] = useState('');
   const MIN_CHAR_LIMIT = 20;
@@ -30,11 +30,21 @@ const TextEditor = () => {
     setValue(content);
 
     // Remove HTML tags and count only the text content
-    const plainText = content.replace(/<[^>]+>/g, '');
+    const plainText = content.replace(/<[^>]+>/g, '').trim();
     if (plainText.length < MIN_CHAR_LIMIT) {
       setError(`Content must be at least ${MIN_CHAR_LIMIT} characters long.`);
     } else {
       setError('');
+    }
+  };
+
+  const handleNext = () => {
+    const plainText = value.replace(/<[^>]+>/g, '').trim();
+    
+    // Check if the content meets the character limit
+    if (plainText.length >= MIN_CHAR_LIMIT) {
+      onContentChange(value); // Pass the content to the parent      
+      nextClick();  // Call the parent function to move to the next step
     }
   };
 
@@ -50,8 +60,10 @@ const TextEditor = () => {
     />
     {error && <p style={styles.error}>{error}</p>}
     <button 
+    type='button'
       style={styles.button}
       disabled={value.replace(/<[^>]+>/g, '').length < MIN_CHAR_LIMIT}
+      onClick={handleNext}
     >
       Next
     </button>
