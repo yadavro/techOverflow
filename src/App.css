@@ -1,36 +1,36 @@
 /* App.css */
 .App {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensure the app takes full viewport height */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the app takes full viewport height */
 }
 
 .app-container {
-    display: flex;
-    flex: 1; /* Allow the container to grow and take available space */
+  display: flex;
+  flex: 1; /* Allow the container to grow and take available space */
 }
 
 .main-layout {
-    display: flex;
-    flex: 1; /* Allow this section to grow and take available space */
-    margin-left: 250px; /* Offset for the side navbar */
-    padding: 20px; /* Add padding to content */
-    padding-bottom: 60px; /* Ensure space for the footer */
-    position: relative; /* Ensure content does not overlap with footer */
+  display: flex;
+  flex: 1; /* Allow this section to grow and take available space */
+  margin-left: 250px; /* Offset for the side navbar */
+ /* Add padding to content */
+  padding-bottom: 60px; /* Ensure space for the footer */
+  position: relative; /* Ensure content does not overlap with footer */
 }
 
 .content {
-    flex: 1; /* Take available space next to the side navbar */
+  flex: 1; /* Take available space next to the side navbar */
 }
 
 footer {
-    background-color: black;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    width: calc(100% - 250px); /* Adjust width to account for side navbar */
-    box-sizing: border-box;
-    position: fixed;
-    bottom: 0; /* Fixed to the bottom of the viewport */
-    left: 250px; /* Align with the left edge of the side navbar */
+  background-color: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: calc(100% - 250px); /* Adjust width to account for side navbar */
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0; /* Fixed to the bottom of the viewport */
+  left: 250px; /* Align with the left edge of the side navbar */
 }

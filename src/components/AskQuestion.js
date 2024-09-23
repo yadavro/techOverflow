@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react'
 import "../util/AskQuestion.css";
 import TextEditor from './TextEditot';
@@ -59,16 +58,3 @@ function AskQuestion() {
 }
 
 export default AskQuestion
-=======
-import React from 'react'
-
-function AskQuestion() {
-  return (
-    <div className='askQuestion'>
-      <h1>hello world</h1>
-    </div>
-  )
-}
-
-export default AskQuestion
->>>>>>> b42d2e88d57ab86538b92622c922a7090e3d6727

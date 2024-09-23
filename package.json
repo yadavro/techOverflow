@@ -1,20 +1,14 @@
 {
-  "name": "redarresal-forum",
+  "name": "readressalforum",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.7.7",
-    "bootstrap": "^5.3.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-icons": "^5.3.0",
-<<<<<<< HEAD
     "react-quill": "^2.0.0",
-=======
->>>>>>> b42d2e88d57ab86538b92622c922a7090e3d6727
     "react-router-dom": "^6.26.2",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
