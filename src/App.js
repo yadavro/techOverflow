@@ -11,6 +11,7 @@ import Register from "./components/Register";
 import QuestionDetail from "./components/QuestionDetail";
 import TagDetail from "./components/TagDetail";
 import AskQuestion from "./components/AskQuestion";
+import Tags from "./components/Tags";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
                 <Route path="/questions/:id" element={<QuestionDetail/>}/>
                 <Route path="/tag/:detail" element={<TagDetail/>}/>
                 <Route path="/askQuestion" element={<AskQuestion/>}/>
+                <Route path="/tags" element={<Tags/>}/>
               </Routes>
             </div>
           </div>
