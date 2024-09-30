@@ -95,14 +95,14 @@ function Questions() {
     navigate(`/tag/${tag}`,{state:{questionTag:tag}});
   }
 
-  const handleClick=(questionid)=>{
-    navigate(`/questions/${questionid}`,{state:{questionId:questionid}});
+  const handleClick=(questionid,title,description)=>{
+    navigate(`/questions/${questionid}`,{state:{questionId:questionid, title:title,description:description}});
   }
 
   const questions = allQuestion.map((question) => {
     return (
       <div key={question.questionid} className="question-container">
-        <div className="question-title" onClick={() => handleClick(question.questionid)}>
+        <div className="question-title" onClick={() => handleClick(question.questionid,question.questionTitle,question.question)}>
           {question.questionTitle}
         </div>
         <div className="question-description">{question.question}</div>

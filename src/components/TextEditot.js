@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css'; // import styles
 
-const TextEditor = ({nextClick,onContentChange}) => {
+const TextEditor = ({nextClick,onContentChange,showNextButton = true}) => {
   const [value, setValue] = useState('');
   const [error, setError] = useState('');
   const MIN_CHAR_LIMIT = 20;
@@ -59,14 +59,16 @@ const TextEditor = ({nextClick,onContentChange}) => {
       style={styles.quillEditor} // Add custom styles here if needed
     />
     {error && <p style={styles.error}>{error}</p>}
-    <button 
-    type='button'
-      style={styles.button}
-      disabled={value.replace(/<[^>]+>/g, '').length < MIN_CHAR_LIMIT}
-      onClick={handleNext}
-    >
-      Next
-    </button>
+    {showNextButton && (
+        <button 
+          type='button'
+          style={styles.button}
+          disabled={value.replace(/<[^>]+>/g, '').length < MIN_CHAR_LIMIT}
+          onClick={handleNext}
+        >
+          Next
+        </button>
+      )}
   </div>
 );
 };
